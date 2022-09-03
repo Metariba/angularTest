@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+.tableStyle {
+  border: 1px solid rgb(99, 98, 98);
+  border-radius: 10px;
+  background-color: rgb(211, 210, 210);
+  font-size: 200%;
+  font-family: Roboto;
+  width: 100%;
+}
+.tableStyle tr:nth-child(even) {
+  background-color: rgb(255, 255, 255);
+}
+
+.newStudentForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  padding: 5%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.newStudentInput {
+  margin-bottom: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 10px;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+.newStudentBottom {
+  margin-bottom: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 10px;
+  border: 1px solid gray;
+  cursor: pointer;
+  color: white;
+  background-color: gray;
+}
+
+.title {
+  color: gray;
+  text-align: center;
+  padding-top: 3%;
+  font-weight: 800;
+  font-size: 300%;
+  font-family: Roboto;
+}
+
+.tableContainer {
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding: 5%;
+}

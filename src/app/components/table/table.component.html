@@ -1,0 +1,71 @@
+<h1 class="title">
+  {{ title }}
+</h1>
+<div class="tableContainer">
+  <table class="tableStyle">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th>Date</th>
+      <th>Update</th>
+    </tr>
+    <tr *ngFor="let student of students">
+      <td>{{ student.id }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.email }}</td>
+      <td>{{ student.age }}</td>
+      <td>{{ student.date }}</td>
+      <td><button (click)="deleteStudent(student.id)">Delete</button></td>
+      <td><a [routerLink]="['/update-student/' + student.id]">update</a></td>
+    </tr>
+  </table>
+
+  <button
+    style="margin-top: 5%; cursor: pointer"
+    *ngIf="!isClicked"
+    (click)="showClicked()"
+  >
+    New Student
+  </button>
+
+  <div class="newStudentForm" *ngIf="isClicked">
+    <i
+      (click)="showClicked()"
+      class="fas fa-compress-alt"
+      style="
+        font-size: 36px;
+        margin-bottom: 5%;
+        text-align: end;
+        cursor: pointer;
+      "
+    ></i>
+    <input
+      class="newStudentInput"
+      type="text"
+      placeholder="name"
+      [(ngModel)]="student.name"
+    />
+    <input
+      class="newStudentInput"
+      type="text"
+      placeholder="email"
+      [(ngModel)]="student.email"
+    />
+    <input
+      class="newStudentInput"
+      type="text"
+      placeholder="age"
+      [(ngModel)]="student.age"
+    />
+    <input
+      class="newStudentInput"
+      type="date"
+      placeholder="date"
+      [(ngModel)]="student.date"
+    />
+
+    <button class="newStudentBottom" (click)="newStudent()">submit</button>
+  </div>
+</div>

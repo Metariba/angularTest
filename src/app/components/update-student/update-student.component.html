@@ -1,0 +1,15 @@
+<div class="newStudentForm">
+  <input
+    class="newStudentInput"
+    type="text"
+    placeholder="name"
+    [(ngModel)]="name"
+  />
+  <input
+    class="newStudentInput"
+    type="text"
+    placeholder="email"
+    [(ngModel)]="email"
+  />
+  <button class="newStudentBottom" (click)="updateStudent()">Update</button>
+</div>
